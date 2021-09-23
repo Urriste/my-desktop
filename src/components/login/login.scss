@@ -1,0 +1,121 @@
+$dark-blue: #00309c;
+$light-blue: #005cc5;
+$border-brown: #ab725d9e;
+$too-light-blue: #c1e3ff;
+$too-light-blue-transparent: #c1e3ff56;
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .left-side {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    border-right: 3px solid rgba(255, 255, 255, 0.275);
+    justify-content: flex-end;
+  }
+
+  .right-side {
+    width: 50%;
+
+    .user-cta {
+      display: flex;
+      cursor: pointer;
+      width: 600px;
+      height: 100px;
+      margin: 0 10px 25px 50px;
+      align-items: center;
+      padding: 0 20px;
+      transition: all 0.2s;
+
+      .login-span {
+        font-size: 13px;
+        font-weight: 300;
+        display: none;
+      }
+
+      .me-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+        border: 1px solid $too-light-blue;
+        margin: 0 10px 0 5px;
+      }
+
+      .user-text {
+        align-self: flex-start;
+        font-size: 17px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+  .user-cta:hover {
+    border-top: 2px solid $too-light-blue-transparent;
+    border-bottom: 2px solid $too-light-blue-transparent;
+    border-left: 2px solid $too-light-blue-transparent;
+    background: rgb(0, 48, 156);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 48, 156, 1) 0%,
+      rgba(0, 92, 197, 1) 53%,
+      rgba(227, 227, 227, 0) 100%
+    );
+    .login-span {
+      display: block;
+    }
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    background-color: $dark-blue;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.493);
+    position: fixed;
+    top: 0;
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
+    background-color: $dark-blue;
+    position: fixed;
+    bottom: 0;
+    border-top: 3px solid $border-brown;
+
+    .poweroff-message {
+      display: flex;
+      align-items: center;
+
+      width: 400px;
+      margin: 20px;
+
+      .poweroff-text {
+        color: white;
+
+        font-weight: 400;
+      }
+
+      .poweroff-img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.467);
+        border-radius: 5px;
+      }
+    }
+
+    .poweroff-message:hover {
+      cursor: pointer;
+      .poweroff-text {
+        text-decoration: underline;
+      }
+    }
+  }
+}
