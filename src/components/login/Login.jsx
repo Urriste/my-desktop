@@ -1,13 +1,20 @@
+//React Imports
 import { React, Fragment } from "react";
+
+//Internal Imports
 import "./login.scss";
 import myDesktopLogo from "../../img/mydesktop2.png";
 import meImg from "../../img/yo.jpeg";
 import powerOffImg from "../../img/poweroff.png";
+
+//External Imports
 import { useHistory } from "react-router-dom";
 
 function Login() {
+  //Instances
   const history = useHistory();
 
+  //Functions
   const handleClick = () => {
     history.push("/inicio");
   };
