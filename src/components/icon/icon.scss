@@ -1,0 +1,31 @@
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 10px 0 50px 0;
+  padding: 3px 0;
+  border: 1px solid transparent;
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+  .icon-text {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+}
+
+.icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.337);
+  cursor: pointer;
+  border: 1px dotted white;
+}
+
+.icon-box:active {
+  background-color: rgba(255, 255, 255, 0.501);
+}

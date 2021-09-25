@@ -1,0 +1,66 @@
+@import "../../index.scss";
+
+.modal {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  z-index: 1500;
+  position: fixed;
+  top: 16%;
+  left: 35%;
+  border: 5px solid $footer-main;
+  border-top: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $footer-main;
+    height: 25px;
+    padding: 3px 0;
+
+    .header-text__container {
+      display: flex;
+      width: 300px;
+      align-items: center;
+
+      .header-img {
+        height: 20px;
+        width: 20px;
+        margin: 0 5px 0 0;
+      }
+
+      .header-text {
+        color: white;
+        font-weight: 500;
+      }
+    }
+
+    .close-btn {
+      height: 100%;
+      background-color: $close-red;
+      border: 1px solid white;
+      border-radius: 3px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #a51e00;
+    }
+  }
+
+  .text-container {
+    height: 93.8%;
+
+    .modal-text {
+      padding: 15px;
+      font-weight: 500;
+      font-size: 20px;
+      margin: 0 !important;
+    }
+  }
+}
