@@ -1,5 +1,8 @@
+//React Imports
 import { React, Fragment } from "react";
 import ReactDom from "react-dom";
+
+//Internal Imports
 import "./modal.scss";
 
 function ModalAbout({ img, open, onClose }) {

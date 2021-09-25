@@ -1,4 +1,7 @@
+//React Imports
 import { React, Fragment } from "react";
+
+//Internal Imports
 import "./asideItem.scss";
 
 function AsideItem({ text }) {
