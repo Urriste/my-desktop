@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.folder-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 10px 0 50px 0;
+  padding: 3px 0;
+  border: 1px solid transparent;
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+  .folder-icon__text {
+    color: black;
+  }
+}
+
+.folder-icon:hover {
+  background-color: rgba($folder-aside-light-blue, $alpha: 0.4);
+  cursor: pointer;
+  border: 1px dotted white;
+}

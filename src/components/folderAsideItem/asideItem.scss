@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.item {
+  width: 140px;
+  height: 25px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(123, 162, 232, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: $dark-blue;
+  margin-top: 10px;
+  border-radius: 5px;
+
+  .item-text {
+    font-size: 12px;
+  }
+}
