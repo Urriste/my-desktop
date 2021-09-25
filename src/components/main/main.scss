@@ -6,6 +6,12 @@
   background: url("../../img/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+
+  .icons-container {
+    height: 100vh;
+    padding: 25px;
+  }
 
   .footer {
     width: 100%;
@@ -15,8 +21,33 @@
     background-color: $footer-main;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $dark-blue;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba($dark-blue, $alpha: 0.1);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.356);
+
+    .icon-open__container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .img-container {
+        background-color: rgba(255, 255, 255, 0.199);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+
+        .footer-img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .img-container:hover {
+      background-color: rgba(255, 255, 255, 0.384);
+    }
 
     .hour {
       width: 100px;
@@ -38,7 +69,7 @@
       display: flex;
       align-items: center;
       height: 100%;
-      border-radius: 0 14px 14px 0;
+
       padding: 0 0 0 5px;
       cursor: pointer;
       transition: all 0.1s;
