@@ -12,6 +12,27 @@
   border-top: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
+  .subheader {
+    width: 100%;
+    background-color: $beige;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    border-bottom: 1.5px solid rgb(201, 201, 201);
+
+    .subheader-text {
+      font-size: 12px;
+
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+    }
+    .subheader-text:hover {
+      background-color: rgba(255, 255, 255, 0.397);
+      cursor: pointer;
+    }
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -55,6 +76,7 @@
 
   .text-container {
     height: 93.8%;
+    overflow: scroll;
 
     .modal-text {
       padding: 15px;

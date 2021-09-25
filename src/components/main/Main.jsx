@@ -5,28 +5,37 @@ import { React, Fragment, useState } from "react";
 import "./main.scss";
 import windowsLogo from "../../img/windows.png";
 import aboutMeIcon from "../../img/blocnotas.png";
-import skillsIcon from "../../img/skills.png";
-import projectsIcon from "../../img/projects.png";
-import contactIcon from "../../img/contact.png";
+import folderIcon from "../../img/projects.png";
+import openFolderIcon from "../../img/open.ico";
 
 //External imports
 import { useHistory } from "react-router";
 
 import Icon from "../icon/Icon";
-import ModalSkills from "../modal/ModalSkills";
+import ModalAbout from "../modalAbout/ModalAbout";
+import FolderModal from "../folderModal/FolderModal";
 
 function Main() {
   let today = new Date();
   const history = useHistory();
 
   const [isAboutOpen, setIsAboutOpen] = useState();
+  const [isSkillsOpen, setIsSkillsOpen] = useState();
 
-  const onClose = () => {
+  const onAboutClose = () => {
     setIsAboutOpen(false);
   };
 
-  const onOpen = () => {
+  const onAboutOpen = () => {
     setIsAboutOpen(true);
+  };
+
+  const onSkillsClose = () => {
+    setIsSkillsOpen(false);
+  };
+
+  const onSkillsOpen = () => {
+    setIsSkillsOpen(true);
   };
 
   const handleClick = () => {
@@ -37,17 +46,22 @@ function Main() {
     <Fragment>
       <div className="main-container">
         <div className="icons-container">
-          <Icon click={onOpen} img={aboutMeIcon} text={"Sobre mi"}></Icon>
-          <ModalSkills
+          <Icon click={onAboutOpen} img={aboutMeIcon} text={"Sobre mi"}></Icon>
+          <ModalAbout
             img={aboutMeIcon}
             open={isAboutOpen}
-            onClose={onClose}
-          ></ModalSkills>
+            onClose={onAboutClose}
+          ></ModalAbout>
 
-          <Icon img={skillsIcon} text={"Skills"}></Icon>
+          <Icon click={onSkillsOpen} img={folderIcon} text={"Skills"}></Icon>
+          <FolderModal
+            img={folderIcon}
+            open={isSkillsOpen}
+            onClose={onSkillsClose}
+            title={"Skills"}
+          ></FolderModal>
 
-          <Icon img={projectsIcon} text={"Proyectos"}></Icon>
-          <Icon img={contactIcon} text={"Contacto"}></Icon>
+          <Icon img={folderIcon} text={"Proyectos"}></Icon>
         </div>
 
         <footer className="footer">
@@ -59,6 +73,11 @@ function Main() {
             {isAboutOpen && (
               <div className="img-container">
                 <img src={aboutMeIcon} alt="icon" className="footer-img" />
+              </div>
+            )}
+            {isSkillsOpen && (
+              <div className="img-container">
+                <img src={openFolderIcon} alt="icon" className="footer-img" />
               </div>
             )}
           </div>
