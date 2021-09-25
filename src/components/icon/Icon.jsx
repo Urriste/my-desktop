@@ -1,5 +1,7 @@
-import React from "react";
-import { Fragment } from "react";
+//React Imports
+import { React, Fragment } from "react";
+
+//Internal Imports
 import "./icon.scss";
 
 const Icon = ({ img, text, click }) => {

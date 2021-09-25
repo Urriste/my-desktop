@@ -1,7 +1,7 @@
 //Variables
 @import "../../index.scss";
 
-.folder-icon {
+.folder-projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,25 +9,23 @@
 
   width: 100px;
   height: 100px;
-  margin: 10px 0 50px 0;
+  margin: 10px 10px 50px 0;
   padding: 3px 0;
   border: 1px solid transparent;
+  text-decoration: none;
 
-  .icon-img {
-    width: 40px;
-    height: 40px;
+  .folder-projects__img {
+    width: 100px;
+    height: 60px;
   }
 
-  .project-img {
-    width: 90px;
-    height: 80px;
-  }
-  .folder-icon__text {
+  .folder-projects__text {
     color: black;
+    font-size: 15px;
   }
 }
 
-.folder-icon:hover {
+.folder-projects:hover {
   background-color: rgba($folder-aside-light-blue, $alpha: 0.4);
   cursor: pointer;
   border: 1px dotted white;
